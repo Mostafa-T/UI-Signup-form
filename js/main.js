@@ -1,16 +1,5 @@
 ($(function () {
 
-  // Full window hieght function
-  $('.head').height($(window).height());
-
-  // Resize the window height function
-  $(window).on('resize', () => {
-
-    $('.head').height($(window).height());
-
-  });
-
-
   //ripple effect btn
   // $('.confirm-btn').on('click', function (e) {
   //   // Prevent default button action
