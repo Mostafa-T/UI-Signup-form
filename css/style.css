@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*
+
+============================
+  CSS index
+============================
+  1.0) Global styling
+  2.0) custom Framework
+*/
+
+/* Start global */
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .head {
+    height: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+/* End global */
+
+/* Start header */
+.header {
+  position: relative;
+  height: 0;
+  width: 100%;
+
+  background-image: url('../assets/images/bg-intro-desktop.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.over-lay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: hsl(0, 100%, 74%) ;
+  opacity: 0.8;
+}
+
+.header-intro {
+  color: #fff;
+  padding: 0rem 2rem;
+}
+.header-intro h1 {
+  font-size: 45px;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+.header-intro p {
+  padding-right: 2rem;
+  line-height: 1.5;
+}
+.header-form {
+  padding: 0rem 2rem;
+}
+.trial-btn {
+  display: block;
+  background-color: hsl(248, 32%, 49%);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 8px 0px 0px hsla(249, 10%, 26%, 0.466) ;
+  color: #fff
+}
+
+.form-container {
+  background-color: #fff;
+  margin:  2rem 0rem;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 8px 0px 0px hsla(249, 10%, 26%, 0.466);
+}
+
+.input-icon {
+  margin: 1rem 0rem;
+}
+.input-icon input {
+  width: 100%;
+  border: none;
+  border: 2px solid #eee;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+
+}
+
+.form-input.not-valid {
+  border-color: #ff9494;
+  background-image: url("../assets/images/icon-error.svg");
+  background-repeat: no-repeat;
+  background-position: right calc(.375em + .1875rem) center;
+}
+
+.input-icon:focus{
+  border-color: hsla(249, 10%, 26%, 0.466);
+}
+
+.confirm-btn {
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+  padding: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 10px;
+  border: none;
+  background-color: hsl(154, 59%, 51%);
+  color: #fff;
+  box-shadow: 0px 2px 0px 0px hsl(246, 25%, 77%);
+  overflow: hidden;
+}
+
+.ripple {
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(1);
+  position: absolute;
+  opacity: 1;
+  animation: rippleDrop .6s linear;
+}
+
+@keyframes rippleDrop {
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.terms-conditions {
+  text-align: center;
+  margin: 1rem;
+  padding: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #888;
+}
+.terms-conditions a {
+  color: #ff9494;
+  font-weight: 700;
+}
+
+@media (max-width: 785px){
+  .header-intro {
+    margin: 2rem auto ;
+    text-align: center;
+  }
+  .header-intro h1 {
+    font-size: 40px;
+  }
+  .header-intro p {
+    padding: 0;
+  }
+
+  .header {
+    background-image: url('../assets/images/bg-intro-mobile.png');
+    background-position:center;
+    background-size: 100%;
+  }
+}
+/* end header */
+
+/* Start Framework */
+.m-auto {
+  margin: auto;
+}
+.custom-row {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px -15px;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-around {
+  justify-content: space-around;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.d-flex {
+  display: flex;
+}
+
+
+@media (min-width: 768px) { /* small Screen rules*/
+
+  .container {
+    width: 750px;
+  }
+} 
+@media (min-width: 992px) { /* Medium screen rules */
+
+  .container {
+    width: 970px;
+  }
+
+
+}
+
+@media (min-width: 1200px) { /* large screen rules*/
+  .container {
+    width: 1170px;
+  }
+  .col-7 {
+    flex: 0 0 58.333333%;
+    max-width: 58.333333% ;
+  }
+  .col-5 {
+    flex: 0 0 41.666667%;
+    max-width: 41.666667%;
+  }
+  .col-6 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .col-8 {
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+  }
+}
+
+.container {
+  padding: 0px 15px;
+  margin: auto;
+}
+
+/* Ends Framework */
+
+.attribution {
+  font-size: 14px;
+  text-align: center;
+  color: #333;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/*  Start js Classes */
+
+.error-msg {
+  display: block;
+  text-align: right;
+  font-size: 13px;
+  color: red;
+  font-style: italic;
+  font-weight: 500;
+  text-transform: capitalize;
+}
